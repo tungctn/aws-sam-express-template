@@ -2,9 +2,7 @@ const express = require("express");
 const app = express();
 const bodyParser = require("body-parser");
 const cors = require("cors");
-const dotenv = require("dotenv");
 const mongoose = require("mongoose");
-dotenv.config();
 const appRouter = require("./routes/index.js");
 
 app.use(cors());
@@ -18,7 +16,7 @@ appRouter.get("/", (req, res) => {
 });
 
 mongoose
-  .connect("mongodb+srv://tungjav:tungjav@cluster0.styzwwu.mongodb.net")
+  .connect(MONGO_URL)
   .then(() => {
     console.log("connected to mongo");
   })
