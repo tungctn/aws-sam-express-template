@@ -18,7 +18,6 @@ To use this template, you need to have AWS CLI and AWS SAM CLI installed on your
 
 Use the following command to configure AWS CLI:
 
-Copy
 
 ```
 aws configure
@@ -26,7 +25,6 @@ aws configure
 
 Use the following commands to build and deploy your application on AWS:
 
-Copy
 
 ```
 sam build
