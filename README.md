@@ -42,7 +42,9 @@ The `sam build` command will create the necessary files to deploy your applicati
 
 3. Run on a local machine.
 
+```
 cd server
+```
 
 ```
 npm start
