@@ -1,6 +1,6 @@
 # Overview
 
-This is a template using AWS SAM to deploy a serverless web application, combined with the ExpressJS backend framework and MongoDB database. The template is pre-configured for the API Gateway and Lambda function services, using AWS CloudFormation.
+This is a template using AWS SAM to deploy a serverless backend application, combined with the ExpressJS framework and MongoDB database. The template is pre-configured for the API Gateway and Lambda function services, using AWS CloudFormation.
 
 # Technologies 
 
