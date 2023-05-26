@@ -6,7 +6,7 @@ This is a template using AWS SAM to deploy a serverless web application, combine
 
 The technologies used in this repo include:
 
-AWS SAM: AWS Serverless Application Model is a simple framework for deploying serverless applications on AWS Lambda and API Gateway.
+AWS SAM: AWS Serverless Application Model is a simple framework for deploying serverless applications on AWS.
 
 ExpressJS: A popular backend framework for Node.js, enabling easy building of RESTful APIs.
 
