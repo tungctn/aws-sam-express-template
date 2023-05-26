@@ -1,82 +1,37 @@
-# lambda-expressjs
-A demo of express js, that runs both locally and in lambda.
+Mô tả tổng quan
+Đây là một template sử dụng AWS SAM để triển khai một ứng dụng web serverless, kết hợp với framework backend ExpressJS và cơ sở dữ liệu MongoDB. Template đã được cấu hình sẵn cho service API Gateway và Lambda function, sử dụng dịch vụ CloudFormation của AWS.
 
-This express app has 3 features:
-- Serverside rendering via ejs
-- The ability to serve static assests ( gorgamel and css for example )
-- An API
+Các công nghệ được sử dụng
+Các công nghệ được sử dụng trong repo của bạn bao gồm:
 
-You might ask why would I want to serve static assets from lambda rather then s3?  
-- You have an exsiting app that you want to move to lambda and off long lived infra with minimal/no code change
-- You need all connetivity over a private network ( private api-gateway )
-- You want to deploy your applicaiton as a whole ( front end and backedn in the same repository/infrsastructure )
+AWS SAM: AWS Serverless Application Model là một khung đơn giản để triển khai ứng dụng serverless trên AWS Lambda và API Gateway.
+ExpressJS: Framework backend phổ biến cho Node.js, cho phép bạn xây dựng các API RESTful một cách dễ dàng.
+MongoDB: Cơ sở dữ liệu NoSQL phổ biến, cho phép bạn lưu trữ dữ liệu một cách linh hoạt và mở rộng.
+Hướng dẫn sử dụng
+Để sử dụng template này, bạn cần cài đặt AWS CLI và AWS SAM CLI trên máy tính của mình.
 
-This respository consists of:
-- Localstack docker-compose file with DynamoDB and S3 ready for use.
-- A noodejs Express application that has a view template, some demonstration API's and the ability to serve static content
-- A Sam Template to provision the AWS Cloudn infrastructure
-- A sample dataset
-- A script to load that sample dataset
+Sau đó, bạn có thể sử dụng các bước sau để triển khai ứng dụng của mình:
 
-Run locally ( express app ):
+Clone repo về máy tính của bạn: git clone https://github.com/<username>/<repo>.git
 
-```
-npm install nodemon
-cd api
-npm i
-node run dev
-```
+Di chuyển vào thư mục chứa mã nguồn của repo: cd <repo>
 
-This will enable hot relading ( edit the code save and the api will be updated no need to stop and start node each file change )
+Sử dụng lệnh sau để triển khai ứng dụng của bạn trên AWS:
 
-Endpoints (GET) are:
-
-http://localhost:3000/
-http://localhost:3000/index
-http://localhost:3000/fruitbox
-http://localhost:3000/fruitbox/:boxItemId
-
-
-Endpoints (POST) are:
-
-http://localhost:3000/fruitbox
-
-This requires contenttype set tp application/json and a body such as:
-
-```
-{
-    "fruitName" : "Apple",
-    "qty" : 50
-}
-```
-
-Here is the curl command:
-```
-curl --location --request POST 'http://localhost/fruitbox' \
---header 'Content-Type: application/json' \
---data-raw '{
-    "fruitName" : "Apple",
-    "qty" : 50
-}'
-```
-
-How to deploy to AWS Lambda?
-
-Ensure you have SAM installed and configured: https://aws.amazon.com/serverless/sam/
-
-Then simply run
-```
+Copy
 sam build
+sam deploy --guided
 ```
 
-Then:
-```
-sam deploy -g
-```
+Lệnh `sam build` sẽ tạo ra các tệp cần thiết để triển khai ứng dụng của bạn, trong khi lệnh `sam deploy` sẽ triển khai ứng dụng của bạn trên AWS.
 
-For subsequent builds use:
-```
-sam build && sam deploy
-```
+Sau khi triển khai ứng dụng của bạn, bạn có thể truy cập API Gateway được tạo ra và sử dụng các endpoint để thao tác với dữ liệu.
 
-Enjoy your Serverless express app in AWS Lambda
+Hướng dẫn đóng góp
+Nếu bạn muốn đóng góp vào repo này, bạn có thể fork repo và tạo pull request. Chúng tôi luôn chào đón các đóng góp từ cộng đồng.
+
+Tài liệu hữu ích
+Bạn có thể tham khảo các tài liệu hướng dẫn trong thư mục 'docs' để biết thêm chi tiết về cách sử dụng template này. Nếu bạn cần các ví dụ sử dụng, bạn có thể tham khảo các tệp trong thư mục 'examples'.
+
+Liên hệ
+Nếu bạn có bất kỳ câu hỏi hoặc đề xuất nào, hãy liên hệ với chúng tôi qua email hoặc tạo issue trên GitHub. Chúng tôi sẽ cố gắng hỗ trợ bạn trong thời gian sớm nhất có thể.
