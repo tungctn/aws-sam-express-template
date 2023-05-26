@@ -6,6 +6,7 @@
 
 
 AWS SAM: AWS Serverless Application Model là một khung đơn giản để triển khai ứng dụng serverless trên AWS Lambda và API Gateway.
+
 ExpressJS: Framework backend phổ biến cho Node.js, cho phép bạn xây dựng các API RESTful một cách dễ dàng.
 
 MongoDB: Cơ sở dữ liệu NoSQL phổ biến, cho phép bạn lưu trữ dữ liệu một cách linh hoạt và mở rộng.
@@ -13,6 +14,13 @@ MongoDB: Cơ sở dữ liệu NoSQL phổ biến, cho phép bạn lưu trữ d�
 # Hướng dẫn sử dụng
 
 Để sử dụng template này, bạn cần cài đặt AWS CLI và AWS SAM CLI trên máy tính của mình.
+
+Sử dụng lệnh sau để cấu hình AWS CLI: 
+
+```
+aws configure
+```
+
 
 Sử dụng lệnh sau để triển khai ứng dụng của bạn trên AWS:
 
