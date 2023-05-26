@@ -1,37 +1,43 @@
-# Mô tả tổng quan
+# Overview
 
-Đây là một template sử dụng AWS SAM để triển khai một ứng dụng web serverless, kết hợp với framework backend ExpressJS và cơ sở dữ liệu MongoDB. Template đã được cấu hình sẵn cho service API Gateway và Lambda function, sử dụng dịch vụ CloudFormation của AWS.
+This is a template using AWS SAM to deploy a serverless web application, combined with the ExpressJS backend framework and MongoDB database. The template is pre-configured for the API Gateway and Lambda function services, using AWS CloudFormation.
 
-# Các công nghệ được sử dụng
+# Technologies 
 
+The technologies used in this repo include:
 
-AWS SAM: AWS Serverless Application Model là một khung đơn giản để triển khai ứng dụng serverless trên AWS Lambda và API Gateway.
+AWS SAM: AWS Serverless Application Model is a simple framework for deploying serverless applications on AWS Lambda and API Gateway.
 
-ExpressJS: Framework backend phổ biến cho Node.js, cho phép bạn xây dựng các API RESTful một cách dễ dàng.
+ExpressJS: A popular backend framework for Node.js, enabling easy building of RESTful APIs.
 
-MongoDB: Cơ sở dữ liệu NoSQL phổ biến, cho phép bạn lưu trữ dữ liệu một cách linh hoạt và mở rộng.
+MongoDB: A popular NoSQL database, allowing for flexible and scalable data storage.
 
-# Hướng dẫn sử dụng
+# Usage Instructions
 
-Để sử dụng template này, bạn cần cài đặt AWS CLI và AWS SAM CLI trên máy tính của mình.
+To use this template, you need to have AWS CLI and AWS SAM CLI installed on your computer.
 
-Sử dụng lệnh sau để cấu hình AWS CLI: 
+Use the following command to configure AWS CLI:
+
+Copy
 
 ```
 aws configure
 ```
 
+Use the following commands to build and deploy your application on AWS:
 
-Sử dụng lệnh sau để triển khai ứng dụng của bạn trên AWS:
+Copy
 
 ```
 sam build
 ```
 
+Copy
+
 ```
 sam deploy --guided
 ```
 
-Lệnh `sam build` sẽ tạo ra các tệp cần thiết để triển khai ứng dụng của bạn, trong khi lệnh `sam deploy` sẽ triển khai ứng dụng của bạn trên AWS.
+The sam build command will create the necessary files to deploy your application, while the sam deploy command will deploy your application on AWS.
 
-Sau khi triển khai ứng dụng của bạn, bạn có thể truy cập API Gateway được tạo ra và sử dụng các endpoint để thao tác với dữ liệu.
+After deploying your application, you can access the created API Gateway and use the endpoints to manipulate data.
