@@ -36,6 +36,6 @@ Copy
 sam deploy --guided
 ```
 
-The sam build command will create the necessary files to deploy your application, while the sam deploy command will deploy your application on AWS.
+The `sam build` command will create the necessary files to deploy your application, while the sam deploy command will deploy your application on AWS.
 
 After deploying your application, you can access the created API Gateway and use the endpoints to manipulate data.
