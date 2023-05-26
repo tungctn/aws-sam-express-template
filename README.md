@@ -16,21 +16,20 @@ MongoDB: A popular NoSQL database, allowing for flexible and scalable data stora
 
 To use this template, you need to have AWS CLI and AWS SAM CLI installed on your computer.
 
-Use the following command to configure AWS CLI:
+1. Use the following command to configure AWS CLI:
 
 
 ```
 aws configure
 ```
 
-Use the following commands to build and deploy your application on AWS:
+2. Use the following commands to build and deploy your application on AWS:
 
 
 ```
 sam build
 ```
 
-Copy
 
 ```
 sam deploy --guided
